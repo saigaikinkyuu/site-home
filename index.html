@@ -14,13 +14,12 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=BIZ+UDMincho:wght@700&family=Cherry+Bomb+One&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=BIZ+UDMincho:wght@400;700&family=Cherry+Bomb+One&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
-        <script type=”application/ld+json”>
-　　　　　{
-            “@context” : “http://schema.org”,
-            “@type” : “WebSite”,
-            “name” : “Japan気象サービス“,
-            “alternateName” : “J気象“,
-            “url” : “https://jkisyou.com”
+        <script type="application/ld+json">
+            {
+            "@context" : "http://schema.org",
+            "@type" : "WebSite",
+            "name" : "Japan気象サービス",
+            "url" : "https://www.jkisyou.com/"
             }
         </script>
         <style>
@@ -824,34 +823,6 @@ padding: 35px 40px;
 }
             </style>
         <div>
-          <script>
-            var api_url = 'https://script.google.com/macros/s/AKfycbwp1T6EyVyAEKMzjTgyVBVKiXFtor2vqv-ZiqvUVQC_-1qIYLmSznVLLTaYGDA3S1sP4w/exec';
-            
-            console.log('1');
-            fetch(api_url)
-              .then(function (fetch_data) {
-                return fetch_data.json();
-              })
-              .then(function (json) {
-                for (var i in json) {
-                  console.log('2');
-                  var I = document.getElementsByClassName("I")[0]; // 最初の要素を取得
-                  console.log(I);
-                  if (json[i].situation === 'stop publish') {
-                    // 何も行わない
-                  } else if (json[i].situation === '') {
-                    I.classList.add('not');
-                  } else {
-                    window.location.href = 'https://saigaikinkyuu.github.io/site-earthquake/';
-                  }
-                  
-                  const notElements = document.querySelectorAll('.not');
-                  notElements.forEach(element => {
-                    element.remove();
-                  });
-                }
-              });
-          </script>
         </div>
     <div class="N">
         <header>
