@@ -3,12 +3,12 @@
                 
                     fetch(api_url)
                       .then(function(fetch_data) {
-                        window.alert(fetch_data)
-                        window.alert(fetch_data.json())
+                        console.log(fetch_data)
+                        console.log(fetch_data.json())
                         return fetch_data.json();
                       })
                       .then(function(json) {
-                        window.alert(json)
+                        console.log(json)
                         for (var i = 0; i < json.length; i++) {
                           if (json[i].kind && json[i].situation) {
                             var situation_text;
